@@ -1,0 +1,35 @@
+.page {
+	background-image: url("../images/dashboard.webp");
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+	flex-direction: row;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-0%, -50%);
+	color: white;
+	padding: 0.3rem 0rem;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.icon {
+	color: white;
+	font: 3rem;
+	width: 50px;
+	height: 50px;
+	border: 1px solid white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

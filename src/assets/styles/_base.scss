@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+	font-size: 85.5%; // 10px
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	// width: 100%;
+	// height: 100%;
+}
+body {
+	background: $color-base;
+	position: relative;
+	// width: 100%;
+	// height: 100%;
+}
+
+section {
+	transition: transform 0.25s;
+	will-change: transform;
+	margin-bottom: 2rem;
+}

@@ -2,12 +2,12 @@ import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { AiFillPlayCircle } from "react-icons/ai";
 import FeatureCard from "./FeatureCard";
-import TestImage from '../assets/images/writetests.png'
+import TestImage from "../assets/images/writetests.png";
 import competitionImage from "../assets/images/competition.png";
 import RewardsImage from "../assets/images/rewards.png";
 
 function Home() {
-  const navigate  = useNavigate()
+  const navigate = useNavigate();
   return (
     <div>
       <div className="min-h-[100vh]">
@@ -34,7 +34,7 @@ function Home() {
               <button
                 className="md:mr-5 btnTypeOne text-sm my-5 md:my-0"
                 onClick={() => {
-                  navigate("/sign-in");
+                  navigate("/sign-up");
                 }}
               >
                 <a> Get Started</a>

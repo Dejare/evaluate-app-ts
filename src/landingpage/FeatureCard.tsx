@@ -1,5 +1,3 @@
-
-
 const FeatureCard = ({
   bg,
   featureText,
@@ -27,4 +25,4 @@ const FeatureCard = ({
   );
 };
 
-export default FeatureCard
+export default FeatureCard;

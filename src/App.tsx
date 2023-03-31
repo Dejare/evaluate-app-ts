@@ -9,7 +9,6 @@ import {
   SignUp,
   UserProfile,
 } from "@clerk/clerk-react";
-import Auth from "./auth/Auth";
 import Layout from "./dashboard/layout/Layout";
 import Main from "./dashboard/views/Main";
 
@@ -42,6 +41,9 @@ function App() {
                         "text-3xl tracking-normal font-[500] headerFont",
                       formFieldInput: "py-4",
                     },
+                    variables: {
+                      fontFamily: "DM Sans",
+                    },
                   }}
                 />
               }
@@ -61,6 +63,9 @@ function App() {
                         "text-3xl tracking-normal font-[500] headerFont",
                       formFieldInput: "py-3",
                     },
+                    variables: {
+                      fontFamily: "DM Sans",
+                    },
                   }}
                 />
               }
@@ -78,6 +83,9 @@ function App() {
                         rootBox:
                           "md:w-[92vw] w-screen flex items-center justify-center h-screen",
                         card: "md:w-[100%] rounded-none shadow-sm",
+                      },
+                      variables: {
+                        fontFamily: "DM Sans",
                       },
                     }}
                   />

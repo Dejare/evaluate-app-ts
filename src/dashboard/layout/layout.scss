@@ -1,0 +1,111 @@
+.layout {
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  .navigationRootBox {
+    width: 8%;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #adadad;
+    justify-content: space-between;
+    padding: 0rem 0rem 3rem 0rem;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    .logo {
+      color: #535251;
+      letter-spacing: 1rem;
+    }
+    .navigation-icons {
+      .nav-icon {
+        color: #a8a5a5;
+        font-size: 16px;
+        margin: 2.5rem 0rem;
+        &:hover {
+          color: #4848f1;
+          transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+      }
+    }
+  }
+  .page-main {
+    width: 92%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .page-layout-bar {
+      width: 100%;
+      height: 10%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border-bottom: 1px solid #adadad;
+      padding: 2rem;
+      .page-bar-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .bar-icon {
+          color: black;
+          font-size: 16px;
+          margin: 0rem 1.5rem;
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+            margin: 0rem 0.5rem;
+          }
+          &:hover {
+            color: #4848f1;
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-icon {
+  color: #535251;
+  font-size: 21px;
+  margin: 2.5rem 0rem;
+  &:hover {
+    color: #4848f1;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+// mobile nav
+.mobileNav {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  margin-bottom: 1rem;
+  .mobile-nav-container {
+    background: #fff;
+    padding: 2rem 2rem;
+    width: 90vw;
+    border-radius: 30px;
+    .navigation-icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .nav-icon {
+        margin: 0rem 1.5rem;
+      }
+    }
+  }
+}

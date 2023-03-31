@@ -133,6 +133,9 @@ function Layout({
             <div className="nav-icon">
               <RiBubbleChartLine />
             </div>
+            <div className="nav-icon" onClick={handleSignOut}>
+              <RiLoginBoxLine />
+            </div>
           </div>
         </div>
       </div>

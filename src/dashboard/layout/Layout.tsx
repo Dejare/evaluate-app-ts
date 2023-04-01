@@ -32,32 +32,31 @@ function Layout({
       className={`flex flex-row items-start md:h-screen layout ${className} `}
     >
       {/* Navigation */}
-      <div className="navigationRootBox">
-        <div className="md:block hidden">
-          <div className="logo">
-            <h1>E</h1>
+      <div className="navigationRootBoxRoot">
+        <div className="navigationRootBox">
+          <div className="md:flex items-center flex-col hidden">
+            <div className="font-dm font-medium my-8">Evaluate</div>
+            <div className="navigation-icons">
+              <div
+                className="nav-icon"
+                onClick={() => {
+                  navigate("/dashboard");
+                }}
+              >
+                <RiHome6Line />
+              </div>
+              <div className="nav-icon">
+                <RiBuildingFill />
+              </div>
+              <div className="nav-icon">
+                <RiBubbleChartLine />
+              </div>
+            </div>
           </div>
-          <div className="navigation-icons">
-            <div
-              className="nav-icon"
-              onClick={() => {
-                navigate("/dashboard");
-              }}
-            >
-              <RiHome6Line />
+          <div className="md:flex hidden">
+            <div className="nav-icon" onClick={handleSignOut}>
+              <RiLoginBoxLine />
             </div>
-            <div className="nav-icon">
-              <RiBuildingFill />
-            </div>
-            <div className="nav-icon">
-              <RiBubbleChartLine />
-            </div>
-          </div>
-        </div>
-
-        <div className="md:flex hidden">
-          <div className="nav-icon" onClick={handleSignOut}>
-            <RiLoginBoxLine />
           </div>
         </div>
       </div>
@@ -93,8 +92,34 @@ function Layout({
             </div>
           </div>
         </div>
-        <div>{children}</div>
+        <div className="relative">
+          <div className="md:w-[90vw]">{children}</div>
+          <div className="mobileNav md:hidden ">
+            <div className="mobile-nav-container shadow-2xl">
+              <div className="navigation-icons">
+                <div
+                  className="nav-icon"
+                  onClick={() => {
+                    navigate("/dashboard");
+                  }}
+                >
+                  <RiHome6Line />
+                </div>
+                <div className="nav-icon">
+                  <RiBuildingFill />
+                </div>
+                <div className="nav-icon">
+                  <RiBubbleChartLine />
+                </div>
+                <div className="nav-icon" onClick={handleSignOut}>
+                  <RiLoginBoxLine />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
       {ModalShown && (
         <Modal>
           <div className="flex flex-row">
@@ -116,29 +141,6 @@ function Layout({
           </div>
         </Modal>
       )}
-      <div className="mobileNav md:hidden ">
-        <div className="mobile-nav-container shadow-2xl">
-          <div className="navigation-icons">
-            <div
-              className="nav-icon"
-              onClick={() => {
-                navigate("/dashboard");
-              }}
-            >
-              <RiHome6Line />
-            </div>
-            <div className="nav-icon">
-              <RiBuildingFill />
-            </div>
-            <div className="nav-icon">
-              <RiBubbleChartLine />
-            </div>
-            <div className="nav-icon" onClick={handleSignOut}>
-              <RiLoginBoxLine />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

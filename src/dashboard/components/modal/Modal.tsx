@@ -11,7 +11,7 @@ const Modal = ({ children }: { children: React.ReactNode }) => {
         className="w-screen h-screen  flex items-center justify-center"
         style={styles}
       >
-        <div className="md:w-1/4 w-[80%] md:h-1/4  h-[35vh] bg-neutral-600 flex items-center justify-center absolute opacity-100">
+        <div className="md:w-1/4 w-[80%] md:h-1/4  h-[25vh] bg-neutral-600 flex items-center justify-center absolute opacity-100">
           {children}
         </div>
       </div>

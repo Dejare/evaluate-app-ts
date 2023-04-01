@@ -44,10 +44,14 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
+.font {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.font-dm {
+  font-family: $bold;
+}
 h1 {
-  font-size: 2em;
-  padding: 0.67em 0;
-  padding-bottom: 0.2em;
+  font-size: 2rem;
   font-family: $bold;
 }
 .headerFont {
@@ -534,9 +538,9 @@ h1 {
   margin-top: 0;
   // margin-bottom: 40px;
   font-weight: 500;
-  line-height: 78px;
+  // line-height: 78px;
   font-size: 72px;
-  letter-spacing: -3px;
+  // letter-spacing: -3px;ssssssssssss
   width: 60%;
   @media screen and (max-width: 768px) {
     width: 100%;

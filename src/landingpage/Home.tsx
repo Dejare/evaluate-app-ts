@@ -85,7 +85,7 @@ function Home() {
               Test Knowledge | Push Forward | Fight Harder
             </p>
             <button className="flex m-auto btnTypeThree items-center justify-center my-5 ">
-              <a href="/auth"> Get Started</a>
+              <a href="/sign-in"> Get Started</a>
             </button>
           </div>
         </div>

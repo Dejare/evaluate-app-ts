@@ -8,10 +8,13 @@ import {
   RiNotification2Line,
   RiUser3Line,
   RiToggleLine,
+  RiMessage2Line,
+  RiSettings5Line,
 } from "react-icons/ri";
 import Modal from "../components/modal/Modal";
 import { useClerk } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/images/eval.jpg";
 
 function Layout({
   children,
@@ -29,13 +32,15 @@ function Layout({
   console.log(user);
   return (
     <div
-      className={`flex flex-row items-start md:h-screen layout ${className} `}
+      className={`flex flex-row items-start md:h-screen layout rounded-3xl ${className} `}
     >
       {/* Navigation */}
       <div className="navigationRootBoxRoot">
         <div className="navigationRootBox">
           <div className="md:flex items-center flex-col hidden">
-            <div className="font-dm font-medium my-8">Evaluate</div>
+            <div className="font-dm font-medium my-8 ">
+              <img src={logo} alt="" />
+            </div>
             <div className="navigation-icons">
               <div
                 className="nav-icon"
@@ -51,10 +56,19 @@ function Layout({
               <div className="nav-icon">
                 <RiBubbleChartLine />
               </div>
+              <div className="nav-icon">
+                <RiMessage2Line />
+              </div>
+              <div className="nav-icon">
+                <RiSettings5Line />
+              </div>
+              <div className="nav-icon">
+                <RiBubbleChartLine />
+              </div>
             </div>
           </div>
           <div className="md:flex hidden">
-            <div className="nav-icon" onClick={handleSignOut}>
+            <div className="nav-icon text-[#9888d4]" onClick={handleSignOut}>
               <RiLoginBoxLine />
             </div>
           </div>
@@ -63,37 +77,9 @@ function Layout({
 
       {/* Page Content */}
       <div className="page-main">
-        <div className="page-layout-bar">
-          <div>
-            <input type="text" name="" id="" />
-          </div>
-          <div className="page-bar-icons">
-            <div className="bar-icon">
-              <RiToggleLine />
-            </div>
-            <div className="bar-icon">
-              <RiNotification2Line />
-            </div>
-            <div
-              className="bar-icon flex flex-row items-center"
-              onClick={() => {
-                navigate("/dashboard/user-profile");
-              }}
-            >
-              {/* <RiUser3Line /> */}
-              <div className="w-12 h-12 ">
-                <img
-                  src={user?.profileImageUrl}
-                  alt="Profile Image"
-                  className="rounded-full w-12 h-12"
-                />
-              </div>
-              <p className="text-sm ml-3 md:flex hidden"> {user?.username}</p>
-            </div>
-          </div>
-        </div>
-        <div className="relative">
-          <div className="md:w-[90vw]">{children}</div>
+        <div className="page-layout-bar"></div>
+        <div className="relative rounded-xl">
+          <div className="md:w-[90vw] rounded-xl">{children}</div>
           <div className="mobileNav md:hidden ">
             <div className="mobile-nav-container shadow-2xl">
               <div className="navigation-icons">
@@ -111,7 +97,10 @@ function Layout({
                 <div className="nav-icon">
                   <RiBubbleChartLine />
                 </div>
-                <div className="nav-icon" onClick={handleSignOut}>
+                <div
+                  className="nav-icon text-[#9888d4]"
+                  onClick={handleSignOut}
+                >
                   <RiLoginBoxLine />
                 </div>
               </div>
